@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  img + img {
+    margin-left: .05em;
+  }
+}
+
+.footer-mobile {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  img {
+    width: 40%;
+  }
+
+  img + img {
+    margin-left: unset;
+  }
+}

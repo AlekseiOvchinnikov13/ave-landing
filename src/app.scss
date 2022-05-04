@@ -1,0 +1,87 @@
+.yellow-stripes-bg, .bottom-shadow-bg {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+.yellow-stripes-bg {
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.bottom-shadow-bg {
+  width: 100%;
+}
+
+.content {
+  padding: .04em 0;
+  height: 100%;
+
+  &-text {
+    margin-top: .03em;
+
+    &__title, &__text {
+      width: 26%;
+    }
+
+    &__title {
+      font-size: .07em;
+      color: rgba(254, 229, 0, 0.97);
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    &__text {
+      padding: 1em 0 2em;
+      font-size: .03em;
+      color: white;
+    }
+
+    &__button {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: .035em;
+      text-transform: uppercase;
+
+      color: black;
+      background: linear-gradient(90deg, #FFE604 20.1%, #DB29C9 78.33%);
+      border-radius: 14px;
+      text-align: center;
+      width: 100%;
+      max-width: 411px;
+      height: 84px;
+
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      border: none;
+
+      &:hover {
+        background: linear-gradient(black 0 0) padding-box, linear-gradient(90deg, #FFE604 20.1%, #DB29C9 78.33%) border-box;
+        border: 3px solid transparent;
+        color: white;
+      }
+    }
+
+    .social-links {
+      justify-content: center;
+      margin: .07em 0 .04em;
+
+      img {
+        width: .085em;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content-text__title, .content-text__text {
+    width: 100%;
+  }
+  .content-text__button {
+    max-width: unset;
+  }
+  .yellow-stripes-bg {
+    top: 50%;
+  }
+}

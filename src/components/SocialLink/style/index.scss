@@ -1,0 +1,20 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style-type: none;
+  width: 100%;
+
+  li {
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    a {
+      margin: 0 .03em;
+      display: flex;
+    }
+  }
+}
