@@ -1,4 +1,4 @@
-.yellow-stripes-bg, .bottom-shadow-bg {
+.yellow-stripes-bg, .bottom-shadow-bg, .phone-bg {
   position: absolute;
   z-index: -1;
   bottom: 0;
@@ -12,6 +12,27 @@
 
 .bottom-shadow-bg {
   width: 100%;
+}
+
+.phone-bg {
+  width: 60%;
+}
+
+.app-wrapper__carousel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 80%;
+  width: 50%;
+  z-index: 2;
+
+  .slick-list {
+    padding: 0 !important;
+
+    img {
+      height: 100%;
+    }
+  }
 }
 
 .content {

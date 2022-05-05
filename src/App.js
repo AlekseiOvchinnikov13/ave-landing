@@ -6,9 +6,26 @@ import classNames from "classnames";
 import {isMobile} from "./helpers";
 import YellowStripes from './assets/images/yellow-stripes.png';
 import BottomShadow from './assets/images/shadow-bottom.svg';
+import Phone from './assets/images/phone.png';
 import Logo from "./components/Logo";
-import './app.scss';
 import SocialLink from "./components/SocialLink";
+import {CHARACTERS} from "./data";
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import './app.scss';
+
+const settingsSlider = {
+  dots: false,
+  fade: true,
+  infinite: true,
+  speed: 500,
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000
+};
 
 const App = () => {
 
@@ -32,7 +49,13 @@ const App = () => {
         className={AppWrapperClasses}
       >
         <img className='yellow-stripes-bg' src={YellowStripes} alt='stripes'/>
+        <img className='phone-bg' src={Phone} alt='phone'/>
         <img className='bottom-shadow-bg' src={BottomShadow} alt='shadow'/>
+        <Slider {...settingsSlider} className='app-wrapper__carousel'>
+          {CHARACTERS.map(character =>
+            <img key={character.id} src={character.img} alt={`person-${character.id}`}/>
+          )}
+        </Slider>
         <Header/>
         <Flex flexDirection='column' justifyContent='space-between' className='content'>
           {!isMobile() && <Logo/>}
