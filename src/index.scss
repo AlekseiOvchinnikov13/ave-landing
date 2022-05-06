@@ -15,6 +15,10 @@ body, ul, li, a, p, h1, button {
   padding: 0;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   overflow: hidden;
   width: 100vw;

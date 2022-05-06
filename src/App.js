@@ -7,24 +7,25 @@ import {isMobile} from "./helpers";
 import YellowStripes from './assets/images/yellow-stripes.png';
 import BottomShadow from './assets/images/shadow-bottom.svg';
 import Phone from './assets/images/phone.png';
+import PhoneMobile from './assets/images/phone-mobile.png';
 import Logo from "./components/Logo";
 import SocialLink from "./components/SocialLink";
-import {CHARACTERS} from "./data";
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
+import {CHARACTERS, CHARACTERS_MOBILE} from "./data";
+import {Carousel} from "react-responsive-carousel";
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './app.scss';
 
 const settingsSlider = {
-  dots: false,
-  fade: true,
-  infinite: true,
-  speed: 500,
+  showThumbs: false,
+  autoPlay: true,
+  selectedItem: 1,
+  showStatus: false,
+  infiniteLoop: true,
   centerMode: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  autoplay: true,
-  autoplaySpeed: 2000
+  centerSlidePercentage: 100,
+  showIndicators: false,
+  showArrows: false,
+  animationHandler: 'fade'
 };
 
 const App = () => {
@@ -49,18 +50,34 @@ const App = () => {
         className={AppWrapperClasses}
       >
         <img className='yellow-stripes-bg' src={YellowStripes} alt='stripes'/>
-        <img className='phone-bg' src={Phone} alt='phone'/>
-        <img className='bottom-shadow-bg' src={BottomShadow} alt='shadow'/>
-        <Slider {...settingsSlider} className='app-wrapper__carousel'>
-          {CHARACTERS.map(character =>
-            <img key={character.id} src={character.img} alt={`person-${character.id}`}/>
-          )}
-        </Slider>
+        {!isMobile() &&
+          <>
+            <img className='phone-bg' src={Phone} alt='phone'/>
+            <img className='bottom-shadow-bg' src={BottomShadow} alt='shadow'/>
+            <Carousel {...settingsSlider} className='carousel-desktop'>
+              {CHARACTERS.map(character =>
+                <img key={character.id} src={character.img} alt={`person-${character.id}`}/>
+              )}
+            </Carousel>
+          </>}
         <Header/>
-        <Flex flexDirection='column' justifyContent='space-between' className='content'>
+        <Flex flexDirection='column' justifyContent={!isMobile() ? 'space-between' : 'flex-end'} className='content'>
           {!isMobile() && <Logo/>}
           <Flex flexDirection='column' alignItems='flex-start' justifyContent='center' className='content-text'>
-            <h1 className='content-text__title'>WORLDWIDE mobile nft PVP GAME</h1>
+            <h1 className='content-text__title'>
+              WORLDWIDE mobile nft PVP GAME
+              {isMobile() &&
+                <>
+                  <img className='phone-mobile-bg' src={PhoneMobile} alt='phone'/>
+                  <img className='bottom-shadow-mobile-bg' src={BottomShadow} alt='shadow'/>
+                  <Carousel {...settingsSlider} className='carousel-mobile'>
+                    {CHARACTERS_MOBILE.map(character =>
+                      <img key={character.id} src={character.img} alt={`person-${character.id}`}/>
+                    )}
+                  </Carousel>
+                </>
+              }
+            </h1>
             <p className='content-text__text'>
               Choose your side in&nbsp;a&nbsp;massive mobile worldwide game where you can earn NFT rewards, and upgrade
               your character. Grind the real world to&nbsp;find preseason rewards

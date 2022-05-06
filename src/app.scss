@@ -18,26 +18,24 @@
   width: 60%;
 }
 
-.app-wrapper__carousel {
+.carousel-desktop {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
-  height: 80%;
-  width: 50%;
   z-index: 2;
+  width: 50%;
 
-  .slick-list {
-    padding: 0 !important;
-
-    img {
-      height: 100%;
-    }
+  .carousel .slide img {
+    width: 70%;
   }
 }
 
 .content {
   padding: .04em 0;
   height: 100%;
+  position: relative;
+
+
 
   &-text {
     margin-top: .03em;
@@ -51,6 +49,31 @@
       color: rgba(254, 229, 0, 0.97);
       font-weight: 900;
       text-transform: uppercase;
+      position: relative;
+
+      .carousel-mobile {
+        position: absolute;
+        bottom: -100%;
+        right: 0;
+        z-index: -1;
+        width: 50%;
+      }
+
+      .bottom-shadow-mobile-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+      }
+
+      .phone-mobile-bg {
+        position: absolute;
+        bottom: 90%;
+        left: 10%;
+        width: 50%;
+        z-index: -2;
+      }
     }
 
     &__text {
@@ -96,6 +119,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .content-text {
+    margin-top: 0;
+  }
   .content-text__title, .content-text__text {
     width: 100%;
   }
@@ -103,6 +129,23 @@
     max-width: unset;
   }
   .yellow-stripes-bg {
-    top: 50%;
+    top: 70%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .content-text__title .phone-mobile-bg {
+    left: 0;
+    bottom: 35%;
+    width: 70%;
+  }
+  .content-text__title .carousel-mobile {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content-text {
+    min-height: 50vh;
   }
 }
