@@ -1,4 +1,4 @@
-import LogoPng from './images/logo.png';
+import LogoPng from './images/logo.svg';
 
 const styleLogo = {width: '100%'}
 

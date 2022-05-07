@@ -1,7 +1,7 @@
-import TwitterIcon from './images/social-links/twitter.png';
-import DiscordIcon from './images/social-links/discord.png';
-import InstagramIcon from './images/social-links/instagram.png';
-import MediumIcon from './images/social-links/medium.png';
+import TwitterIcon from './images/social-links/Twitter.svg';
+import DiscordIcon from './images/social-links/Discord.svg';
+import InstagramIcon from './images/social-links/Instagram.svg';
+import MediumIcon from './images/social-links/Medium.svg';
 
 import Person1 from './images/characters/desktop/person-icon-1.png';
 import Person2 from './images/characters/desktop/person-icon-2.png';

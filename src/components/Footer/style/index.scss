@@ -4,8 +4,14 @@
   align-items: center;
   justify-content: flex-start;
 
-  img + img {
-    margin-left: .05em;
+  .binance-img {
+    margin-right: .05em;
+  }
+
+  .flex-wrapper {
+    img + img {
+      margin-left: .02em;
+    }
   }
 }
 
@@ -14,10 +20,10 @@
   flex-direction: row-reverse;
 
   img {
-    width: 40%;
+    width: 30%;
   }
 
-  img + img {
-    margin-left: unset;
+  .binance-img {
+    margin-right: 0;
   }
 }

@@ -1,7 +1,9 @@
 import classNames from "classnames";
 import {isMobile} from "../../helpers";
-import BinanceIcon from './images/binance-icon.png';
-import StoresIcon from './images/stores-icon.png';
+import BinanceIcon from './images/binance-icon.svg';
+import AppStoreIcon from './images/app-store-icon.svg';
+import GooglePlayIcon from './images/google-pay-icon.svg';
+import Flex from "../Flex";
 import './style/index.scss';
 
 const Footer = () => {
@@ -9,8 +11,11 @@ const Footer = () => {
 
   return (
     <footer className={classes}>
-      <img src={BinanceIcon} alt="binance"/>
-      <img src={StoresIcon} alt="appStore GooglePay"/>
+      <img className='binance-img' src={BinanceIcon} alt="binance"/>
+      <Flex>
+        <img src={AppStoreIcon} alt="App Store"/>
+        <img src={GooglePlayIcon} alt="Google Play"/>
+      </Flex>
     </footer>
   )
 }
