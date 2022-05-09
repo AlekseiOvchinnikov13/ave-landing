@@ -10,7 +10,7 @@ import Phone from './assets/images/phone.png';
 import PhoneMobile from './assets/images/phone-mobile.png';
 import Logo from "./components/Logo";
 import SocialLink from "./components/SocialLink";
-import {CHARACTERS, CHARACTERS_MOBILE} from "./data";
+import {CHARACTERS} from "./data";
 import {Carousel} from "react-responsive-carousel";
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './app.scss';
@@ -71,7 +71,7 @@ const App = () => {
                   <img className='phone-mobile-bg' src={PhoneMobile} alt='phone'/>
                   <img className='bottom-shadow-mobile-bg' src={BottomShadow} alt='shadow'/>
                   <Carousel {...settingsSlider} className='carousel-mobile'>
-                    {CHARACTERS_MOBILE.map(character =>
+                    {CHARACTERS.map(character =>
                       <img key={character.id} src={character.img} alt={`person-${character.id}`}/>
                     )}
                   </Carousel>

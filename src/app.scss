@@ -25,8 +25,9 @@
   z-index: 2;
   width: 50%;
 
-  .carousel .slide img {
-    width: 70%;
+  .slider-wrapper .slide img {
+    height: 100%;
+    max-width: 1.5em;
   }
 }
 
@@ -34,8 +35,6 @@
   padding: .04em 0;
   height: 100%;
   position: relative;
-
-
 
   &-text {
     margin-top: .03em;
@@ -53,10 +52,14 @@
 
       .carousel-mobile {
         position: absolute;
-        bottom: -100%;
+        bottom: 0;
         right: 0;
         z-index: -1;
-        width: 50%;
+        width: 60%;
+
+        .slider-wrapper .slide img {
+          max-width: 14em;
+        }
       }
 
       .bottom-shadow-mobile-bg {
@@ -127,6 +130,7 @@
   }
   .content-text__button {
     max-width: unset;
+    height: 64px;
   }
   .yellow-stripes-bg {
     top: 70%;
