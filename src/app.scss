@@ -10,7 +10,8 @@
 
 .phone-bg {
   width: 60%;
-  top: 15%;
+  top: 20%;
+  left: 30vw;
 }
 
 .carousel-desktop {
@@ -131,6 +132,57 @@
   .content-text__button {
     max-width: unset;
     height: 64px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
+  .app-wrapper-mobile {
+    padding: .03em .025em;
+  }
+  .content {
+    height: unset;
+    padding: .02em 0;
+
+    .content-text {
+      width: 65%;
+    }
+  }
+  .content-text__title .phone-mobile-bg {
+    left: 100%;
+    bottom: unset;
+    top: 0;
+  }
+  .content-text__title .carousel-mobile {
+    bottom: unset;
+    top: -100%;
+    width: 80%;
+    right: -80%;
+  }
+  .content-text__title .bottom-shadow-mobile-bg {
+    left: 100%;
+    bottom: unset;
+    top: 40vh;
+  }
+  .content-text .social-links {
+    margin: .03em 0 .02em;
+  }
+  .content-text .social-links img {
+    width: 0.035em;
+  }
+  .footer-mobile img {
+    width: 10%;
+  }
+  .header-mobile {
+    justify-content: flex-start;
+  }
+  .logo {
+    width: 50% !important;
+  }
+  .content-text__title {
+    font-size: .05em;
+  }
+  .content-text__text {
+    font-size: .02em;
   }
 }
 
