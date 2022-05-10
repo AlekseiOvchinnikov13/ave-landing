@@ -1,21 +1,16 @@
-.yellow-stripes-bg, .bottom-shadow-bg, .phone-bg {
+.bottom-shadow-bg, .phone-bg {
   position: absolute;
   z-index: -1;
-  bottom: 0;
-}
-
-.yellow-stripes-bg {
-  right: 0;
-  top: 0;
-  height: 100%;
 }
 
 .bottom-shadow-bg {
   width: 100%;
+  bottom: 0;
 }
 
 .phone-bg {
   width: 60%;
+  top: 15%;
 }
 
 .carousel-desktop {
@@ -36,6 +31,10 @@
   height: 100%;
   position: relative;
 
+  .logo {
+    width: 50% !important;
+  }
+
   &-text {
     margin-top: .03em;
 
@@ -45,7 +44,8 @@
 
     &__title {
       font-size: .07em;
-      color: rgba(254, 229, 0, 0.97);
+      line-height: 1;
+      color: #F992DC;
       font-weight: 900;
       text-transform: uppercase;
       position: relative;
@@ -131,9 +131,6 @@
   .content-text__button {
     max-width: unset;
     height: 64px;
-  }
-  .yellow-stripes-bg {
-    top: 70%;
   }
 }
 

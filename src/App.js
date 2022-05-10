@@ -49,7 +49,6 @@ const App = () => {
         alignItems='center'
         className={AppWrapperClasses}
       >
-        <img className='yellow-stripes-bg' src={YellowStripes} alt='stripes'/>
         {!isMobile() &&
           <>
             <img className='phone-bg' src={Phone} alt='phone'/>
