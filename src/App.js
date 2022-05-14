@@ -6,21 +6,12 @@ import classNames from "classnames";
 import {isMobile} from "./helpers";
 import BottomShadow from './assets/images/shadow-bottom.svg';
 import Phone from './assets/images/phone.png';
-//import PhoneMobile from './assets/images/phone-mobile.png';
 import SocialLink from "./components/SocialLink";
-import {CHARACTERS} from "./data";
 import './app.scss';
 import ModalWindow from "./components/ModalWindow";
 import {useMoralis} from "react-moralis";
-import {Fade} from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
-
-const settingsSlider = {
-  duration: 2000,
-  transitionDuration: 800,
-  arrows: false,
-  pauseOnHover: false,
-};
+import CharactersSlider from "./components/CharactersSlider";
 
 const App = () => {
   const [, setSize] = useState([0, 0]);
@@ -41,10 +32,10 @@ const App = () => {
     isMobile()
       ? document.querySelector("html").classList.remove('overflow-hidden')
       : document.querySelector("html").classList.add('overflow-hidden')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMobile()]);
 
   const AppWrapperClasses = classNames('app-wrapper', {'app-wrapper-mobile': isMobile()})
-
   const {authenticate, isAuthenticated, logout, setUserData} = useMoralis();
   const options = {
     signingMessage: "Sign in using Moralis",
@@ -77,19 +68,14 @@ const App = () => {
         alignItems='center'
         className={AppWrapperClasses}
       >
-        <img className='bottom-shadow-bg' src={BottomShadow} alt='shadow'/>
+        {!isMobile() && <img className='bottom-shadow-bg' src={BottomShadow} alt='shadow'/>}
         <img className='phone-bg' src={Phone} alt='phone'/>
-        <Fade {...settingsSlider} className='carousel-desktop'>
-          {CHARACTERS.map(character =>
-            <img
-              key={character.id}
-              src={!isMobile() ? character.img : character.imgMobile}
-              alt={`person-${character.id}`}/>
-          )}
-        </Fade>
+        {!isMobile() && <CharactersSlider className='carousel-desktop'/>}
         <Header/>
-        <Flex flexDirection='column' justifyContent={!isMobile() ? 'space-between' : 'flex-end'} className='content'>
+        <Flex flexDirection='column' justifyContent='space-between' className='content'>
+          {isMobile() && <CharactersSlider className='carousel-mobile'/>}
           <Flex flexDirection='column' alignItems='flex-start' justifyContent='center' className='content-text'>
+            {isMobile() && <img className='bottom-shadow-bg' src={BottomShadow} alt='shadow'/>}
             <h1 className='content-text__title'>
               WORLDWIDE mobile nft PVP GAME
             </h1>
