@@ -1,3 +1,5 @@
+
+
 .app-wrapper {
 
   .bottom-shadow-bg, .phone-bg {
@@ -56,35 +58,9 @@
         font-size: .019em;
         padding: 3.5em 0;
       }
-
-      &__button {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 900;
-        font-size: .022em;
-        text-transform: uppercase;
-
-        color: black;
-        background: linear-gradient(90deg, #FFE604 20.1%, #DB29C9 78.33%);
-        border-radius: 14px;
-        text-align: center;
-
-        cursor: pointer;
-        transition: all .3s ease-in-out;
-        border: none;
-        min-height: 4em;
-        max-width: 19.5em;
-        width: 100%;
-
-        &:hover {
-          background: linear-gradient(black 0 0) padding-box, linear-gradient(90deg, #FFE604 20.1%, #DB29C9 78.33%) border-box;
-          border: 3px solid transparent;
-          color: white;
-        }
-      }
     }
   }
 }
-
 
 @media only screen and (max-width: 1024px) {
   body {
