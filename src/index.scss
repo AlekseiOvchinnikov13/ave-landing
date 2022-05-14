@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -10,24 +11,23 @@ html {
   box-sizing: inherit;
 }
 
-body, ul, li, a, p, h1, button {
+body, ul, li, a, p, h1, h4, button {
   margin: 0;
   padding: 0;
 }
 
-html {
+.overflow-hidden {
   overflow: hidden;
 }
 
 body {
-  overflow: hidden;
   width: 100vw;
   min-width: 320px;
   max-width: 1920px;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
 
   background-color: #000;
   font-family: 'Montserrat', sans-serif;
-  font-size: min(100vw, 600px);
+  font-size: 100vh;
 }

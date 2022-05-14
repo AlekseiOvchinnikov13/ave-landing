@@ -9,10 +9,8 @@ const Header = () => {
 
   return (
     <header className={classes}>
-      {isMobile()
-        ? (<Logo/>)
-        : (<SocialLink/>)
-      }
+      <Logo/>
+      {!isMobile() && <SocialLink/>}
     </header>
   )
 }

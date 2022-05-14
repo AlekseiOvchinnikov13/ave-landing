@@ -3,14 +3,23 @@ import DiscordIcon from './images/social-links/Discord.svg';
 import InstagramIcon from './images/social-links/Instagram.svg';
 import MediumIcon from './images/social-links/Medium.svg';
 
-import Person1 from './images/characters/1.png';
-import Person2 from './images/characters/2.png';
-import Person3 from './images/characters/3.png';
-import Person4 from './images/characters/4.png';
-import Person5 from './images/characters/5.png';
-import Person6 from './images/characters/6.png';
-import Person7 from './images/characters/7.png';
-import Person8 from './images/characters/8.png';
+import Person1 from './images/characters/desktop/6.png';
+import Person2 from './images/characters/desktop/7.png';
+import Person3 from './images/characters/desktop/8.png';
+import Person4 from './images/characters/desktop/9.png';
+import Person5 from './images/characters/desktop/10.png';
+import Person6 from './images/characters/desktop/11.png';
+import Person7 from './images/characters/desktop/13.png';
+import Person8 from './images/characters/desktop/14.png';
+
+import PersonMobile1 from './images/characters/mobile/6-2.png';
+import PersonMobile2 from './images/characters/mobile/7-2.png';
+import PersonMobile3 from './images/characters/mobile/8-2.png';
+import PersonMobile4 from './images/characters/mobile/9-2.png';
+import PersonMobile5 from './images/characters/mobile/10-2.png';
+import PersonMobile6 from './images/characters/mobile/11-2.png';
+import PersonMobile7 from './images/characters/mobile/13-2.png';
+import PersonMobile8 from './images/characters/mobile/14-2.png';
 
 export const SOCIAL_LINKS = [
   {
@@ -38,34 +47,42 @@ export const SOCIAL_LINKS = [
 export const CHARACTERS = [
   {
     id: 1,
-    img: Person1
+    img: Person1,
+    imgMobile: PersonMobile1
   },
   {
     id: 2,
-    img: Person2
+    img: Person2,
+    imgMobile: PersonMobile2
   },
   {
     id: 3,
-    img: Person3
+    img: Person3,
+    imgMobile: PersonMobile3
   },
   {
     id: 4,
-    img: Person4
+    img: Person4,
+    imgMobile: PersonMobile4
   },
   {
     id: 5,
-    img: Person5
+    img: Person5,
+    imgMobile: PersonMobile5
   },
   {
     id: 6,
-    img: Person6
+    img: Person6,
+    imgMobile: PersonMobile6
   },
   {
     id: 7,
-    img: Person7
+    img: Person7,
+    imgMobile: PersonMobile7
   },
   {
     id: 8,
-    img: Person8
+    img: Person8,
+    imgMobile: PersonMobile8
   },
 ];
