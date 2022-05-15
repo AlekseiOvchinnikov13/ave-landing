@@ -12,25 +12,35 @@ const SignInButton = ({className}) => {
 
   const {authenticate, isAuthenticated, logout} = useMoralis();
   const options = {
-    signingMessage: "Sign in using Moralis",
-    onComplete: () => alert('You have successfully registered!'),
+    signingMessage: "Sign in using Moralis"
   }
 
   const buttonConnectRef = useRef(null);
   const buttonSignInRef = useRef(null);
   const [btnSignInVisible, setBtnSignInVisible] = useState(true);
   const btnSignInVisibleHandler = () => setBtnSignInVisible(!btnSignInVisible);
+  const clearAnimation = () => {
+    setTimeout(() => {
+      buttonConnectRef.current && buttonConnectRef.current.classList.remove('button-flip-in-x', 'button-flip-out-x');
+      buttonSignInRef.current && buttonSignInRef.current.classList.remove('button-flip-out-x', 'button-flip-in-x');
+    }, 500);
+  }
+
+  const buttonsVisibilityChange = () =>
+    setTimeout(() => {
+      btnSignInVisibleHandler();
+      clearAnimation();
+    }, 400);
 
   useEffect(() => {
-    buttonConnectRef.current && buttonConnectRef.current.classList.add('button-flip-in-x');
+    btnSignInVisible
+      ? buttonConnectRef.current && buttonConnectRef.current.classList.add('button-flip-in-x')
+      : buttonSignInRef.current && buttonSignInRef.current.classList.add('button-flip-in-x');
   }, [buttonConnectRef, btnSignInVisible])
 
   const buttonSignInHandler = () => {
     buttonSignInRef.current && buttonSignInRef.current.classList.add('button-flip-out-x');
-    setTimeout(() => {
-      btnSignInVisibleHandler();
-
-    }, 400);
+    buttonsVisibilityChange();
   };
 
   const login = async () => {
@@ -42,6 +52,14 @@ const SignInButton = ({className}) => {
       await logout();
     }
   }
+
+  const buttonConnectHandler = async () => {
+    buttonConnectRef.current && buttonConnectRef.current.classList.add('button-flip-out-x');
+    buttonsVisibilityChange();
+    await login();
+  }
+
+  if (isAuthenticated) return <p className='registered-text button-view'>You have successfully registered!</p>
 
   return (
     <>
@@ -62,7 +80,7 @@ const SignInButton = ({className}) => {
           />
           <button
             className='button-view'
-            onClick={login}
+            onClick={buttonConnectHandler}
           >
             Connect
           </button>

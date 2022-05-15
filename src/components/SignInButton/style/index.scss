@@ -28,6 +28,9 @@
 }
 
 .connect-wrapper {
+  position: relative;
+  z-index: 1;
+
   input {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -38,6 +41,7 @@
     border: 3px solid transparent;
     min-height: 4em;
     padding: 0 1em;
+    width: 100%;
 
     &::placeholder {
       color: #F992DC;
@@ -47,6 +51,7 @@
   button {
     margin-left: 1em;
     min-height: 4em;
+    padding: 0 1em;
   }
 }
 
@@ -56,4 +61,12 @@
 
 .button-flip-in-x {
   animation: flipInX .4s ease-in-out;
+}
+
+.registered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .018em;
+  cursor: default;
 }
