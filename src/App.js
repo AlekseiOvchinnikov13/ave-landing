@@ -48,7 +48,7 @@ const App = () => {
           <Flex flexDirection='column' alignItems='flex-start' justifyContent='center' className='content-text'>
             {isMobile() && <img className='bottom-shadow-bg' src={BottomShadow} alt='shadow'/>}
             <h1 className='content-text__title'>
-              WORLDWIDE mobile nft PVP GAME
+              WORLDWIDE mobile nft PVP&nbsp;GAME
             </h1>
             <p className='content-text__text'>
               Choose your side in&nbsp;a&nbsp;massive mobile worldwide game where you can earn NFT rewards, and upgrade
