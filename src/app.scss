@@ -1,5 +1,4 @@
 
-
 .app-wrapper {
 
   .bottom-shadow-bg, .phone-bg {
@@ -98,11 +97,15 @@
     transform: translateX(-50%);
   }
   .social-links {
-    justify-content: flex-start;
-    margin: .03em 0;
+    justify-content: space-around;
+    margin: .045em 0 .03em;
+  }
+  .app-wrapper .content-text__title {
+    text-align: center;
   }
   .app-wrapper .content-text__text {
-    padding: 2.2em 0;
+    padding: 2.2em 0 2.4em;
+    text-align: center;
   }
   .app-wrapper .phone-bg {
     left: 32vw;
@@ -111,6 +114,9 @@
   }
   .header .logo {
     width: 100%;
+  }
+  .sign-in-button {
+    max-width: unset;
   }
 }
 
