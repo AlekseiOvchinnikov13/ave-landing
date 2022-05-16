@@ -12,14 +12,14 @@ import Person6 from './images/characters/desktop/11.png';
 import Person7 from './images/characters/desktop/13.png';
 import Person8 from './images/characters/desktop/14.png';
 
-import PersonMobile1 from './images/characters/mobile/6-2.png';
-import PersonMobile2 from './images/characters/mobile/7-2.png';
-import PersonMobile3 from './images/characters/mobile/8-2.png';
-import PersonMobile4 from './images/characters/mobile/9-2.png';
-import PersonMobile5 from './images/characters/mobile/10-2.png';
-import PersonMobile6 from './images/characters/mobile/11-2.png';
-import PersonMobile7 from './images/characters/mobile/13-2.png';
-import PersonMobile8 from './images/characters/mobile/14-2.png';
+import PersonMobile1 from './images/characters/mobile/6.png';
+import PersonMobile2 from './images/characters/mobile/7.png';
+import PersonMobile3 from './images/characters/mobile/8.png';
+import PersonMobile4 from './images/characters/mobile/9.png';
+import PersonMobile5 from './images/characters/mobile/10.png';
+import PersonMobile6 from './images/characters/mobile/11.png';
+import PersonMobile7 from './images/characters/mobile/13.png';
+import PersonMobile8 from './images/characters/mobile/14.png';
 
 export const SOCIAL_LINKS = [
   {

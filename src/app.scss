@@ -1,4 +1,3 @@
-
 .app-wrapper {
 
   .bottom-shadow-bg, .phone-bg {
@@ -12,11 +11,10 @@
   }
 
   .phone-bg {
-    left: 52vw;
-    top: 20%;
-    transform: translateX(-50%);
-    width: 80vw;
+    right: 10vw;
+    top: 20vh;
     height: 80vh;
+    width: 60vw;
     object-fit: contain;
     z-index: -1;
   }
@@ -35,6 +33,8 @@
 
     img {
       width: 1.3em;
+      height: 1.6em;
+      object-fit: contain;
     }
   }
 
@@ -102,15 +102,18 @@
   }
   .app-wrapper .content-text__title {
     text-align: center;
+    font-size: 0.072em;
   }
   .app-wrapper .content-text__text {
     padding: 2.2em 0 2.4em;
     text-align: center;
+    font-size: 0.0285em;
   }
   .app-wrapper .phone-bg {
-    left: 32vw;
-    top: 15%;
-    height: 40vh;
+    right: 27vw;
+    top: 12vh;
+    height: 50vh;
+    width: 50vw;
   }
   .header .logo {
     width: 100%;
@@ -129,8 +132,10 @@
     height: 1em;
   }
   .app-wrapper .phone-bg {
-    width: 100vw;
-    height: 50vh;
+    right: 36vw;
+    top: 10vh;
+    height: 65vh;
+    width: 60vw;
   }
   .app-wrapper .content-text__button {
     max-width: unset;
@@ -155,7 +160,7 @@
     width: 40vw;
   }
   .app-wrapper .bottom-shadow-bg {
-    bottom: -10%;
+    bottom: 25%;
     left: 100%;
     width: 50vw;
   }
@@ -166,7 +171,9 @@
     transform: translate(-50%, -50%);
   }
   .app-wrapper .carousel-mobile img {
-    width: .6em;
+    width: .7em;
+    height: 100%;
+    object-fit: contain;
     left: auto;
     right: -45vw;
   }
@@ -175,5 +182,9 @@
   }
   .footer {
     z-index: 1;
+  }
+  .app-wrapper .content-text__title,
+  .app-wrapper .content-text__text {
+    text-align: left;
   }
 }
