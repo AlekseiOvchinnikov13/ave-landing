@@ -54,6 +54,7 @@ const SignInButton = ({className}) => {
   }
 
   const buttonConnectHandler = async () => {
+    if (email.length <= 0) return;
     buttonConnectRef.current && buttonConnectRef.current.classList.add('button-flip-out-x');
     buttonsVisibilityChange();
     await login();
